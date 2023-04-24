@@ -8,6 +8,7 @@ class Maradona {
         this.img.src = "/images/mardonA.png"
         this.w = 50;
         this.h = 60;
+        this.speed = 12;
     }
 
     // acciones
@@ -15,4 +16,22 @@ class Maradona {
         ctx.drawImage(this.img, this.x, this.y, this.w, this.h)
     }
 
-}
+   maradonaMovement = (movimiento) => {
+        if (movimiento === "Left") {     
+            this.x -= this.speed;
+        //console.log("tocando tecla izquierda")
+        }
+        else if (movimiento === "Right"){
+            this.x += this.speed;
+        //console.log("tocando tecla derecha")
+        }
+        else if(movimiento === "Up"){
+            this.y -= this.speed;
+        //console.log("tocando tecla arriba")
+        }
+        else if (movimiento === "Down"){
+            this.y += this.speed;
+        //console.log("tocando tecla abajo" )
+        }
+    }
+} 
