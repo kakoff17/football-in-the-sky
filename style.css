@@ -8,7 +8,7 @@ body {
   #my-canvas {
     background-color: darkgray;
     display: none;
-    margin-top: 100px;
+    margin-top: 60px;
   }
   
   .container #start-btn {
@@ -17,7 +17,7 @@ body {
     color: white;
     padding: 10px;
     font-size: 35px;
-    margin-top: 40px;
+    margin-top: 30px;
     border-radius: 10px; 
     cursor: pointer;
     
@@ -29,9 +29,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 30px;
   }
   
+  h2 {
+    color: black;
+  }
+
+  #end-screen {
+    display: none;
+  }
 
   
   

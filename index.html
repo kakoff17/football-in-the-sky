@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Football in the sky</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-
-        <!-- Imagen inicio -->
-        <div id="start-screen" class="container">
-        <img src="images/fondo-web.jpg" alt="background">
+      <!-- Imagen inicio -->
+      <div id="start-screen" class="container">
+        <img src="images/fondo-web.jpg" alt="background" />
         <button id="start-btn">Play!</button>
-        </div>
-      
-         
-        <!-- GAME SCREEN -->
-      <canvas id="my-canvas" width="400" height="600"></canvas>
-        
-        <!-- GAME OVER SCREEN -->
-      <!--  <div id="restart-screen" class="container">
-          <img src="images/argentina.jpg" width="500" alt="logo">
-          <button id="restart-btn">Play again!</button>
-        </div> -->
-    
       </div>
-    
-      <script src="/javascript/main.js"></script>
-      <script src="/javascript/Game.js"></script>
-      <script src="/javascript/Pele.js"></script>
-      <script src="/javascript/Maradona.js"></script>
-      <script src="/javascript/Pelota.js"></script>
-</body>
+
+      <div>El juego acaba en <span id="time"> 5 </span> segundos</div>
+
+      <!-- Screen game -->
+      <div>        
+        <canvas id="my-canvas" width="400" height="600"></canvas>
+      </div>
+
+      <br/>
+
+      <h2>La canción de dios</h2>
+      <audio controls>
+        <source src="sound/maradona-mano-dioos.mp3" type="audio/mp3" />
+      </audio>
+
+      <!-- Final del partido -->
+      --  <div id="end-screen" class="container">
+          <img src="images/final-partido.png" width="500" alt="logo">
+          </div> 
+
+        
+    </div>
+
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/Game.js"></script>
+    <script src="/javascript/Pele.js"></script>
+    <script src="/javascript/Maradona.js"></script>
+    <script src="/javascript/Pelota.js"></script>
+  </body>
 </html>
