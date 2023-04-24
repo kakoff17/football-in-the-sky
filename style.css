@@ -1,0 +1,37 @@
+body {
+    background-image: url("images/banderas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  }
+    
+  #my-canvas {
+    background-color: darkgray;
+    display: none;
+    margin-top: 100px;
+  }
+  
+  .container #start-btn {
+    position: absolute;
+    background-color: rgb(2, 10, 2);
+    color: white;
+    padding: 10px;
+    font-size: 35px;
+    margin-top: 40px;
+    border-radius: 10px; 
+    cursor: pointer;
+    
+  }
+  
+  .container {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+  }
+  
+
+  
+  
