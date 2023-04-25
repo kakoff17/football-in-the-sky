@@ -5,7 +5,7 @@ class Maradona {
     this.y = 525;
     this.img = new Image();
     this.img.src = "/images/mardonA.png";
-    this.w = 60;
+    this.w = 55;
     this.h = 70;
     this.speed = 20;
   }

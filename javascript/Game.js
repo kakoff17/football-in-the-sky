@@ -6,6 +6,7 @@ class Game {
     this.pele = new Pele();
     this.maradona = new Maradona();
     this.pelota = new Pelota();
+    this.isGameOn = true;
   }
 
   drawPitch = () => {
@@ -44,15 +45,28 @@ class Game {
     }
   };
 
+  endGame = () => {
+    // 1. Detener el juego
+    this.isGameOn = false;
+
+    // 2. Ocultar el canvas
+    canvas.style.display = "none";
+
+    // 3. Mostramos la pantalla final
+    endScreen.style.display = "flex";
+    // ocultar marcador
+    timerEl.style.display = "none";
+    // mostrar el boton de restart
+    restartBtn.style.display = "block";
+
+  };
+
   gameLoop = () => {
     //console.log("probando ejecución")
-
-    // limpieza
 
     // acciones y movimientos elementos
     this.pelota.pelotaMovement();
     this.collisionBall();
-    //this.pelota.restartOnCollision();
 
     // dibujando los elementos
     this.drawPitch();
@@ -60,7 +74,10 @@ class Game {
     this.maradona.maradonaDraw();
     this.pelota.pelotaDraw();
 
+
     // Recursion
-    requestAnimationFrame(this.gameLoop);
+    if (this.isGameOn === true) {
+      requestAnimationFrame(this.gameLoop);
+    }
   };
 }

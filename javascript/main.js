@@ -4,49 +4,61 @@ const startScreen = document.querySelector("#start-screen");
 const endScreen = document.querySelector("#end-screen");
 const canvas = document.querySelector("#my-canvas");
 const startBtn = document.querySelector("#start-btn");
-const restartBtn = document.querySelector("#restart-btn");
+const marcador = document.querySelector(".marcador")
+const restartBtn = document.querySelector("#restart-btn")
+
 
 const ctx = canvas.getContext("2d");
 
 let game;
 
-const countdownDisplay = document.getElementById("time");
-let countdown = 10;
-const winnerImage = document.getElementById("end-screen");
+const timerEl = document.getElementById("timer");
+const temporizador = document.getElementById("time")
+
+let remainingTime = 150;
 
 // Funciones
 
 const startGame = () => {
-  console.log("prueba");
+  //console.log("prueba");
 
   // Cambiar pantallas
   startScreen.style.display = "none";
   endScreen.style.display = "none";
   canvas.style.display = "block";
+  marcador.style.display = "table";
+  timerEl.style.display = "block";
+
 
   // Elementos partida
   // Sistema de clases
   game = new Game();
   //console.log(game)
 
+  //TIMER
+  const timer = setInterval(() => {
+    remainingTime--;
+    if (remainingTime === 0) {
+      clearInterval(timer);
+      // detiene el juego
+      game.endGame();
+      // cambia a la endScreen
+      canvas.style.display = "none";
+            endScreen.style.display = "block";
+    } else {
+      temporizador.innerText = remainingTime.toString();
+
+    }
+  }, 1000);
+
   // Iniciar el bucle.
   game.gameLoop();
 };
 
-const timer = setInterval(() => {
-  countdown--;
-  countdownDisplay.innerHTML = countdown;
-
-  if (countdown === 0) {
-    clearInterval(timer);
-    startScreen.setAttribute("style", "display: none");
-    endScreen.setAttribute("style", "display: block");
-    canvas.setAttribute("style", "display : none");
-  }
-}, 1000);
-
 // Event listeners
 startBtn.addEventListener("click", startGame);
+restartBtn.addEventListener("click", startGame);
+
 window.addEventListener("keydown", (event) => {
   if (event.code === "ArrowUp") {
     // console.log("tocando arrowup");

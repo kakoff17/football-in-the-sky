@@ -1,44 +1,82 @@
 body {
-    background-image: url("images/banderas.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-  }
-    
-  #my-canvas {
-    background-color: darkgray;
-    display: none;
-    margin-top: 60px;
-  }
-  
-  .container #start-btn {
-    position: absolute;
-    background-color: rgb(2, 10, 2);
-    color: white;
-    padding: 10px;
-    font-size: 35px;
-    margin-top: 30px;
-    border-radius: 10px; 
-    cursor: pointer;
-    
-  }
-  
-  .container {
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-  
-  h2 {
-    color: black;
-  }
+  background-image: url("images/banderas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
 
-  #end-screen {
-    display: none;
-  }
+#my-canvas {
+  background-color: darkgray;
+  display: none;
+  margin-top: 60px;
+}
 
-  
-  
+.container #start-btn {
+  position: absolute;
+  background-color: rgb(2, 10, 2);
+  color: white;
+  padding: 10px;
+  font-size: 35px;
+  margin-top: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+h2 {
+  color: black;
+}
+
+#end-screen {
+  display: none;
+}
+
+#timer {
+  background: linear-gradient(yellow,rgb(0, 255, 64));
+  display: none;
+  color: black;
+}
+
+.marcador {
+  display: none;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 50 50 20px rgba(0, 0, 0, 0.15);
+}
+
+.marcador thead tr {
+  background-color: rgb(114, 108, 108);
+  color: black;
+  text-align: left;
+}
+
+.marcador tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.marcador tbody td{
+  background-color: rgb(214, 203, 203);
+}
+
+.container #restart-btn {
+  position: absolute;
+  display: none;
+  background-color: rgb(2, 10, 2);
+  color: white;
+  padding: 10px;
+  font-size: 35px;
+  margin-top: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
