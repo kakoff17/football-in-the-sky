@@ -4,18 +4,25 @@ const startScreen = document.querySelector("#start-screen");
 const endScreen = document.querySelector("#end-screen");
 const canvas = document.querySelector("#my-canvas");
 const startBtn = document.querySelector("#start-btn");
-const marcador = document.querySelector(".marcador")
-const restartBtn = document.querySelector("#restart-btn")
+const marcador = document.querySelector(".marcador");
+const restartBtn = document.querySelector("#restart-btn");
+const winnerPele = document.querySelector("#winner-pele");
+const winnerMaradona = document.querySelector("#winner-maradona");
+const draw = document.querySelector("#draw");
 
+
+//audio
+const myAudio = document.getElementById("audio");
+myAudio.volume = 0.05;
 
 const ctx = canvas.getContext("2d");
-
 let game;
 
+//variables timer
 const timerEl = document.getElementById("timer");
-const temporizador = document.getElementById("time")
+const temporizador = document.getElementById("time");
 
-let remainingTime = 100;
+let remainingTime = 5;
 
 // Funciones
 
@@ -23,12 +30,11 @@ const startGame = () => {
   //console.log("prueba");
 
   // Cambiar pantallas
-  startScreen.style.display = "none";
-  endScreen.style.display = "none";
+  startScreen.style.display = "none";  
   canvas.style.display = "block";
   marcador.style.display = "table";
   timerEl.style.display = "block";
-
+  audio.style.display = "block";
 
   // Elementos partida
   // Sistema de clases
@@ -43,17 +49,16 @@ const startGame = () => {
       // detiene el juego
       game.endGame();
       // cambia a la endScreen
-      canvas.style.display = "none";
-            endScreen.style.display = "block";
+      canvas.style.display = "none";      
     } else {
       temporizador.innerText = remainingTime.toString();
-
     }
   }, 1000);
 
   // Iniciar el bucle.
   game.gameLoop();
 };
+
 
 // Event listeners
 startBtn.addEventListener("click", startGame);
@@ -96,3 +101,4 @@ window.addEventListener("keydown", (event) => {
     game.pele.peleMovement("S");
   }
 });
+
