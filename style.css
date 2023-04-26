@@ -5,6 +5,29 @@ body {
   margin: 0;
 }
 
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.instructions {
+    border-collapse: collapse;
+    
+}
+
+
+.instructions table{
+  background-color: lightseagreen;
+}
+
+.instructions td, th {
+  border: 1px solid black;
+  padding: 5px;
+  
+}
+
 #my-canvas {
   background-color: darkgray;
   display: none;
@@ -48,10 +71,10 @@ h2 {
 .marcador {
   display: none;
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 15px 0;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 400px;
+  min-width: 200px;
   box-shadow: 50 50 20px rgba(0, 0, 0, 0.15);
 }
 

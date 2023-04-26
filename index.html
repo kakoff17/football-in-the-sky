@@ -13,14 +13,51 @@
         <audio src="sound/maradona-mano-dios.mp3" preload="yes" controls></audio>
       </div>
 
+      <!-- Temporizador -->
+      <div id="timer">El partido acaba en <span id="time"> 150 </span> segundos</div>
+
+      <div class="box">
+      
+        <!-- Instrucciones -->
+        
+        <div id="instructions" class="instructions">     
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Move left</th>
+                <th>Move Down</th>
+                <th>Move Right</th>
+                <th>Move Up</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pele</td>
+                <td>A</td>
+                <td>S</td>
+                <td>D</td>
+                <td>W</td>
+              </tr>
+              <tr>
+                <td>Maradona</td>
+                <td>Arrow Left</td>
+                <td>Arrow Down</td>
+                <td>Arrow Right</td>
+                <td>Arrow Up</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+
       <!-- Imagen inicio -->
       <div id="start-screen" class="container">
         <img src="images/fondo-web.jpg" alt="background" />
         <button id="start-btn">Play!</button>
       </div>
-      <br>
-      <!-- Temporizador -->
-      <div id="timer">El partido acaba en <span id="time"> 150 </span> segundos</div>
+      <br>      
 
       <!-- Screen game -->
       <div>
@@ -30,6 +67,7 @@
       <br>
 
       <!-- Marcador -->
+      <div>
       <table class="marcador">
         <thead>
           <tr>
@@ -48,7 +86,8 @@
           </tr>
         </tbody>
       </table>
-
+    </div>
+  </div>
       <br />
 
       <!-- Final del partido -->
@@ -61,6 +100,7 @@
         <button id="restart-btn">Restart Game</button>
       </div>
     </div>
+  
 
     <script src="/javascript/main.js"></script>
     <script src="/javascript/Game.js"></script>

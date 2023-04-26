@@ -57,8 +57,7 @@ class Game {
     // ocultar marcador
     timerEl.style.display = "none";
     // mostrar el boton de restart
-    restartBtn.style.display = "block";
-
+    restartBtn.style.display = "block";    
   };
 
   gameLoop = () => {

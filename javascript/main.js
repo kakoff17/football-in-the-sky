@@ -9,6 +9,7 @@ const restartBtn = document.querySelector("#restart-btn");
 const winnerPele = document.querySelector("#winner-pele");
 const winnerMaradona = document.querySelector("#winner-maradona");
 const draw = document.querySelector("#draw");
+const instructionsBox = document.querySelector(".instructions")
 
 
 //audio
@@ -49,7 +50,9 @@ const startGame = () => {
       // detiene el juego
       game.endGame();
       // cambia a la endScreen
-      canvas.style.display = "none";      
+      canvas.style.display = "none";
+      //quitar las teclas al final del partido
+      instructionsBox.style.display = "none";
     } else {
       temporizador.innerText = remainingTime.toString();
     }
