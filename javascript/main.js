@@ -15,7 +15,7 @@ let game;
 const timerEl = document.getElementById("timer");
 const temporizador = document.getElementById("time")
 
-let remainingTime = 150;
+let remainingTime = 100;
 
 // Funciones
 
