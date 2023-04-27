@@ -1,7 +1,7 @@
 //console.log("probando");
 
 const startScreen = document.querySelector("#start-screen");
-const endScreen = document.querySelector("#end-screen");
+const endGame = document.querySelector("#end-screen");
 const canvas = document.querySelector("#my-canvas");
 const startBtn = document.querySelector("#start-btn");
 const marcador = document.querySelector(".marcador");
@@ -9,7 +9,8 @@ const restartBtn = document.querySelector("#restart-btn");
 const winnerPele = document.querySelector("#winner-pele");
 const winnerMaradona = document.querySelector("#winner-maradona");
 const draw = document.querySelector("#draw");
-const instructionsBox = document.querySelector(".instructions")
+const instructionsBox = document.querySelector(".instructions");
+const goalMessage = document.querySelector("#goal");
 
 
 //audio
@@ -23,25 +24,33 @@ let game;
 const timerEl = document.getElementById("timer");
 const temporizador = document.getElementById("time");
 
-let remainingTime = 5;
+let peleGoal = document.getElementById("pele-goals");
+let maradonaGoal = document.getElementById("maradona-goals");
 
 // Funciones
 
 const startGame = () => {
-  //console.log("prueba");
-
   // Cambiar pantallas
   startScreen.style.display = "none";  
   canvas.style.display = "block";
   marcador.style.display = "table";
   timerEl.style.display = "block";
-  audio.style.display = "block";
+  myAudio.style.display = "block";  
+  restartBtn.style.display = "none";
+  goalMessage.style.display = "block";
 
   // Elementos partida
   // Sistema de clases
   game = new Game();
   //console.log(game)
 
+  // Reinicie marcador
+  peleGoal.textContent = "0";  
+  maradonaGoal.textContent = "0";
+  goalMessage.textContent = "";
+
+  //inicia / reinicia timer
+  let remainingTime = 100;
   //TIMER
   const timer = setInterval(() => {
     remainingTime--;
@@ -51,12 +60,14 @@ const startGame = () => {
       game.endGame();
       // cambia a la endScreen
       canvas.style.display = "none";
-      //quitar las teclas al final del partido
-      instructionsBox.style.display = "none";
     } else {
       temporizador.innerText = remainingTime.toString();
     }
   }, 1000);
+   
+  instructionsBox.style.display = "block";
+  //elimina imagen endGame
+  endGame.style.display = "none";
 
   // Iniciar el bucle.
   game.gameLoop();
@@ -104,4 +115,3 @@ window.addEventListener("keydown", (event) => {
     game.pele.peleMovement("S");
   }
 });
-

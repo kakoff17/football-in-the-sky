@@ -10,18 +10,18 @@
   <body>
     <div class="container">
       <div id="audio">
-        <audio src="sound/maradona-mano-dios.mp3" preload="yes" controls></audio>
-      </div>
+        <audio src="sound/maradona-mano-dios.mp3" preload="yes" volume = "0.05" controls></audio>
+    </div>
 
       <!-- Temporizador -->
       <div id="timer">El partido acaba en <span id="time"> 150 </span> segundos</div>
 
-      <div class="box">
+      <div class="box">     
       
-        <!-- Instrucciones -->
-        
+
+        <!-- Instrucciones -->        
         <div id="instructions" class="instructions">     
-          <table>
+        <table>
             <thead>
               <tr>
                 <th></th>
@@ -47,9 +47,7 @@
                 <td>Arrow Up</td>
               </tr>
             </tbody>
-          </table>
-
-
+        </table>
         </div>
 
       <!-- Imagen inicio -->
@@ -63,6 +61,8 @@
       <div>
         <canvas id="my-canvas" width="400" height="600"></canvas>
       </div>
+
+      
 
       <br>
 
@@ -87,6 +87,7 @@
         </tbody>
       </table>
     </div>
+    <div id="goal"></div>
   </div>
       <br />
 

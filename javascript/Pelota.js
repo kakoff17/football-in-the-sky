@@ -32,22 +32,6 @@ class Pelota {
       this.isPelotaMovingRight = true;
     }
 
-    if (this.y + this.h > canvas.height) {
-      alert("Gol de Pele");
-      this.y = canvas.height - this.h;
-      this.isPelotaMovingDown = false;
-      // apunta un gol a Pele en la tabla
-      const peleGoal = document.getElementById("pele-goals");
-      peleGoal.textContent = parseInt(peleGoal.textContent) + 1;
-    } else if (this.y - this.h < 0) {
-      alert("Gol de Maradona");
-      this.y = this.h;
-      this.isPelotaMovingDown = true;
-      // apunta un gol a Maradona en la tabla
-      const maradonaGoal = document.getElementById("maradona-goals");
-      maradonaGoal.textContent = parseInt(maradonaGoal.textContent) + 1;
-    }
-
     if (this.isPelotaMovingRight === false) {
       this.x -= this.velocity;
     } 

@@ -53,19 +53,61 @@ class Game {
     canvas.style.display = "none";
 
     // 3. Mostramos la pantalla final
-    endScreen.style.display = "flex";
+    endGame.style.display = "flex";
     // ocultar marcador
     timerEl.style.display = "none";
     // mostrar el boton de restart
-    restartBtn.style.display = "block";    
+    restartBtn.style.display = "block";
+
+    //quitar las teclas al final del partido
+    instructionsBox.style.display = "none";
+
+    // quitar el mensaje de goles
+    goalMessage.style.display = "none";
+
   };
 
+ checkGoal = () => {
+    if (this.pelota.y + this.pelota.h > canvas.height) {
+      document.getElementById("goal").textContent = "Gol de Pele";
+      this.pelota.y = canvas.height - this.pelota.h;
+      this.pelota.isPelotaMovingDown = false;
+      // apunta un gol a Pele en la tabla
+      const peleGoal = document.getElementById("pele-goals");
+      peleGoal.textContent = parseInt(peleGoal.textContent) + 1;
+      this.restartGame();
+    } else if (this.pelota.y - this.pelota.h < 0) {
+      document.getElementById("goal").textContent = "Gol de Maradona";
+      this.pelota.y = this.pelota.h;
+      this.pelota.isPelotaMovingDown = true;
+      // apunta un gol a Maradona en la tabla
+      const maradonaGoal = document.getElementById("maradona-goals");
+      maradonaGoal.textContent = parseInt(maradonaGoal.textContent) + 1;
+      this.restartGame();
+    }
+  };
+
+  restartGame = () => {
+    // Reinicia posicion pelota
+    this.pelota.x = canvas.width / 2 - this.pelota.w / 2;
+    this.pelota.y = canvas.height / 2 - this.pelota.h / 2;
+    this.pelota.velocity = 0.9;
+  
+    // Reinicia posicion jugadores
+    this.pele.x = canvas.width / 2 - this.pele.w / 2;
+    this.pele.y = 20;  
+    this.maradona.x = canvas.width / 2 - this.maradona.w / 2;
+    this.maradona.y = 525;
+  };
+
+ 
   gameLoop = () => {
     //console.log("probando ejecución")
 
     // acciones y movimientos elementos
     this.pelota.pelotaMovement();
     this.collisionBall();
+    this.checkGoal();
 
     // dibujando los elementos
     this.drawPitch();
@@ -73,10 +115,10 @@ class Game {
     this.maradona.maradonaDraw();
     this.pelota.pelotaDraw();
 
-
     // Recursion
     if (this.isGameOn === true) {
       requestAnimationFrame(this.gameLoop);
     }
   };
 }
+

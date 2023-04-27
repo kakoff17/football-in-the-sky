@@ -5,33 +5,40 @@ body {
   margin: 0;
 }
 
+.container {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
 .box {
   display: flex;
   flex-direction: row;
+  justify-content: normal;
   align-items: center;
-  justify-content:space-around;
 }
 
 .instructions {
-    border-collapse: collapse;
-    
+    border-collapse: collapse;    
 }
 
-
 .instructions table{
-  background-color: lightseagreen;
+  background-color: rgb(171, 185, 154);
 }
 
 .instructions td, th {
   border: 1px solid black;
-  padding: 5px;
-  
+  padding: 5px;  
 }
 
 #my-canvas {
   background-color: darkgray;
   display: none;
   margin-top: 60px;
+  align-content: center;
 }
 
 .container #start-btn {
@@ -43,19 +50,6 @@ body {
   margin-top: 30px;
   border-radius: 10px;
   cursor: pointer;
-}
-
-.container {
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-h2 {
-  color: black;
 }
 
 #end-screen {
@@ -72,14 +66,12 @@ h2 {
   display: none;
   border-collapse: collapse;
   margin: 15px 0;
-  font-size: 0.9em;
-  font-family: sans-serif;
+  font-size: 1em;
   min-width: 200px;
-  box-shadow: 50 50 20px rgba(0, 0, 0, 0.15);
 }
 
 .marcador thead tr {
-  background-color: rgb(114, 108, 108);
+  background-color: rgb(74, 94, 107);
   color: black;
   text-align: left;
 }
@@ -89,7 +81,7 @@ h2 {
 }
 
 .marcador tbody td{
-  background-color: rgb(214, 203, 203);
+  background-color: rgb(38, 223, 223);
 }
 
 .container #restart-btn {
@@ -102,4 +94,10 @@ h2 {
   margin-top: 30px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+#goal{
+  background-color: black;
+  color: greenyellow;
+  text-align:center + 10px;
 }
