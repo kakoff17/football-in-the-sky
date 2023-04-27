@@ -10,18 +10,23 @@
   <body>
     <div class="container">
       <div id="audio">
-        <audio src="sound/maradona-mano-dios.mp3" preload="yes" volume = "0.05" controls></audio>
-    </div>
+        <audio
+          src="sound/maradona-mano-dios.mp3"
+          preload="yes"
+          volume="0.05"
+          controls
+        ></audio>
+      </div>
 
       <!-- Temporizador -->
-      <div id="timer">El partido acaba en <span id="time"> 150 </span> segundos</div>
+      <div id="timer">
+        El partido acaba en <span id="time"> 150 </span> segundos
+      </div>
 
-      <div class="box">     
-      
-
-        <!-- Instrucciones -->        
-        <div id="instructions" class="instructions">     
-        <table>
+      <div class="box">
+        <!-- Instrucciones -->
+        <div id="instructions" class="instructions">
+          <table>
             <thead>
               <tr>
                 <th></th>
@@ -47,61 +52,58 @@
                 <td>Arrow Up</td>
               </tr>
             </tbody>
-        </table>
+          </table>
         </div>
 
-      <!-- Imagen inicio -->
-      <div id="start-screen" class="container">
-        <img src="images/fondo-web.jpg" alt="background" />
-        <button id="start-btn">Play!</button>
+        <!-- Imagen inicio -->
+        <div id="start-screen" class="container">
+          <img src="images/fondo-web.jpg" alt="background" />
+          <button id="start-btn">Play!</button>
+        </div>
+        <br />
+
+        <!-- Screen game -->
+        <div>
+          <canvas id="my-canvas" width="400" height="600"></canvas>
+        </div>
+
+        <br />
+
+        <!-- Marcador -->
+        <div>
+          <table class="marcador">
+            <thead>
+              <tr>
+                <th>Jugador</th>
+                <th>Goles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="pele-row">
+                <td>Pele</td>
+                <td id="pele-goals">0</td>
+              </tr>
+              <tr id="maradona-row">
+                <td>Maradona</td>
+                <td id="maradona-goals">0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="goal"></div>
       </div>
-      <br>      
-
-      <!-- Screen game -->
-      <div>
-        <canvas id="my-canvas" width="400" height="600"></canvas>
-      </div>
-
-      
-
-      <br>
-
-      <!-- Marcador -->
-      <div>
-      <table class="marcador">
-        <thead>
-          <tr>
-            <th>Jugador</th>
-            <th>Goles</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="pele-row">
-            <td>Pele</td>
-            <td id="pele-goals">0</td>
-          </tr>
-          <tr id="maradona-row">
-            <td>Maradona</td>
-            <td id="maradona-goals">0</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div id="goal"></div>
-  </div>
       <br />
 
       <!-- Final del partido -->
       <div id="end-screen" class="container">
-        <img src="images/final-partido.png" width="500" alt="logo" />
+        <img src="images/empate.png" width="700" alt="logo" />
       </div>
-      
+
       <!-- Boton Restart -->
       <div id="restart-game" class="container">
         <button id="restart-btn">Restart Game</button>
       </div>
     </div>
-  
 
     <script src="/javascript/main.js"></script>
     <script src="/javascript/Game.js"></script>

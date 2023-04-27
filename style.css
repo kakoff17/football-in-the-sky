@@ -17,7 +17,6 @@ body {
 .box {
   display: flex;
   flex-direction: row;
-  justify-content: normal;
   align-items: center;
 }
 

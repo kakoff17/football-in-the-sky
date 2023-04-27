@@ -50,7 +50,7 @@ const startGame = () => {
   goalMessage.textContent = "";
 
   //inicia / reinicia timer
-  let remainingTime = 100;
+  let remainingTime = 5;
   //TIMER
   const timer = setInterval(() => {
     remainingTime--;
