@@ -4,7 +4,7 @@ class Maradona {
     this.x = canvas.width / 2 - 25;
     this.y = 525;
     this.img = new Image();
-    this.img.src = "/images/mardonA.png";
+    this.img.src = "images/mardonA.png";
     this.w = 55;
     this.h = 70;
     this.speed = 20;

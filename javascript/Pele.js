@@ -4,7 +4,7 @@ class Pele {
     this.x = canvas.width / 2 - 25;
     this.y = 20;
     this.img = new Image();
-    this.img.src = "/images/peleSmall.png";
+    this.img.src = "images/peleSmall.png";
     this.w = 55;
     this.h = 70;
     this.speed = 20;
