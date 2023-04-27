@@ -12,9 +12,8 @@ const draw = document.querySelector("#draw");
 const instructionsBox = document.querySelector(".instructions");
 const goalMessage = document.querySelector("#goal");
 
-
 //audio
-const myAudio = document.getElementById("audio");
+const myAudio = document.querySelector("#audio audio");
 myAudio.volume = 0.05;
 
 const ctx = canvas.getContext("2d");
@@ -50,7 +49,7 @@ const startGame = () => {
   goalMessage.textContent = "";
 
   //inicia / reinicia timer
-  let remainingTime = 5;
+  let remainingTime = 100;
   //TIMER
   const timer = setInterval(() => {
     remainingTime--;
