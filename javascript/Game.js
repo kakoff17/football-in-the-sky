@@ -91,7 +91,7 @@ class Game {
     // Reinicia posicion pelota
     this.pelota.x = canvas.width / 2 - this.pelota.w / 2;
     this.pelota.y = canvas.height / 2 - this.pelota.h / 2;
-    this.pelota.velocity = 0.9;
+    this.pelota.velocity = 0.85;
   
     // Reinicia posicion jugadores
     this.pele.x = canvas.width / 2 - this.pele.w / 2;

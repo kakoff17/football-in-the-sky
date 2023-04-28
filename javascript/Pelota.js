@@ -6,7 +6,7 @@ class Pelota {
     this.img.src = "images/pelota.png";
     this.w = 30;
     this.h = 30;
-    this.velocity = 1;
+    this.velocity = 0.9;
     //this.color = "#ffffff";
     this.isPelotaMovingDown = true;
     this.isPelotaMovingRight = true;
@@ -14,7 +14,7 @@ class Pelota {
     // llama a la funciona de la velocidad cada 15 secs
     setInterval(() => {
       this.pelotaSpeed();
-    }, 20000);
+    }, 12000);
 
   }
 
