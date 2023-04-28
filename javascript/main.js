@@ -1,5 +1,3 @@
-//console.log("probando");
-
 const startScreen = document.querySelector("#start-screen");
 const endGame = document.querySelector("#end-screen");
 const canvas = document.querySelector("#my-canvas");

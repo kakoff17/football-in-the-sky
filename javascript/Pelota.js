@@ -6,8 +6,7 @@ class Pelota {
     this.img.src = "images/pelota.png";
     this.w = 30;
     this.h = 30;
-    this.velocity = 0.9;
-    //this.color = "#ffffff";
+    this.velocity = 0.95;    
     this.isPelotaMovingDown = true;
     this.isPelotaMovingRight = true;
     

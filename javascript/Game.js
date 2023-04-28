@@ -26,8 +26,6 @@ class Game {
       this.pelota.y < this.pele.y + this.pele.h - 10 &&
       this.pelota.h + this.pelota.y > this.pele.y
     ) {
-      //console.log("la pelotita toca a pele");
-
       // cambia la direccion
       this.pelota.isPelotaMovingDown = true;
     }
@@ -38,8 +36,6 @@ class Game {
       this.pelota.y < this.maradona.y + this.maradona.h - 30 &&
       this.pelota.h + this.pelota.y - 20 > this.maradona.y
     ) {
-      //console.log("la pelotita toca a maradona");
-
       // cambia la direccion
       this.pelota.isPelotaMovingDown = false;
     }
@@ -64,10 +60,9 @@ class Game {
 
     // quitar el mensaje de goles
     goalMessage.style.display = "none";
-
   };
 
- checkGoal = () => {
+  checkGoal = () => {
     if (this.pelota.y + this.pelota.h > canvas.height) {
       document.getElementById("goal").textContent = "Gol de Pele";
       this.pelota.y = canvas.height - this.pelota.h;
@@ -92,18 +87,15 @@ class Game {
     this.pelota.x = canvas.width / 2 - this.pelota.w / 2;
     this.pelota.y = canvas.height / 2 - this.pelota.h / 2;
     this.pelota.velocity = 0.85;
-  
+
     // Reinicia posicion jugadores
     this.pele.x = canvas.width / 2 - this.pele.w / 2;
-    this.pele.y = 20;  
+    this.pele.y = 20;
     this.maradona.x = canvas.width / 2 - this.maradona.w / 2;
     this.maradona.y = 525;
   };
 
- 
   gameLoop = () => {
-    //console.log("probando ejecución")
-
     // acciones y movimientos elementos
     this.pelota.pelotaMovement();
     this.collisionBall();
@@ -121,4 +113,3 @@ class Game {
     }
   };
 }
-
