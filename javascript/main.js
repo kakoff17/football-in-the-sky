@@ -6,9 +6,6 @@ const canvas = document.querySelector("#my-canvas");
 const startBtn = document.querySelector("#start-btn");
 const marcador = document.querySelector(".marcador");
 const restartBtn = document.querySelector("#restart-btn");
-const winnerPele = document.querySelector("#winner-pele");
-const winnerMaradona = document.querySelector("#winner-maradona");
-const draw = document.querySelector("#draw");
 const instructionsBox = document.querySelector(".instructions");
 const goalMessage = document.querySelector("#goal");
 
@@ -49,7 +46,7 @@ const startGame = () => {
   goalMessage.textContent = "";
 
   //inicia / reinicia timer
-  let remainingTime = 100;
+  let remainingTime = 60;
   
   //TIMER
   const timer = setInterval(() => {

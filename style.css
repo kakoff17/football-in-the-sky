@@ -9,7 +9,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   margin-top: 30px;
 }
@@ -21,16 +21,17 @@ body {
 }
 
 .instructions {
-    border-collapse: collapse;    
+  border-collapse: collapse;
 }
 
-.instructions table{
+.instructions table {
   background-color: rgb(171, 185, 154);
 }
 
-.instructions td, th {
+.instructions td,
+th {
   border: 1px solid black;
-  padding: 5px;  
+  padding: 5px;
 }
 
 #my-canvas {
@@ -56,9 +57,10 @@ body {
 }
 
 #timer {
-  background: linear-gradient(yellow,rgb(0, 255, 64));
+  background: linear-gradient(yellow, rgb(0, 255, 64));
   display: none;
   color: black;
+  font-size: 18px;
 }
 
 .marcador {
@@ -79,7 +81,7 @@ body {
   border-bottom: 1px solid #dddddd;
 }
 
-.marcador tbody td{
+.marcador tbody td {
   background-color: rgb(38, 223, 223);
 }
 
@@ -95,8 +97,8 @@ body {
   cursor: pointer;
 }
 
-#goal{
+#goal {
   background-color: black;
   color: greenyellow;
-  text-align:center;
+  text-align: center;
 }
