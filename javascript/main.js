@@ -50,6 +50,7 @@ const startGame = () => {
 
   //inicia / reinicia timer
   let remainingTime = 100;
+  
   //TIMER
   const timer = setInterval(() => {
     remainingTime--;
